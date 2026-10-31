@@ -792,6 +792,15 @@ window.peGetGclid=function(){try{var r=localStorage.getItem('pe_gclid');if(!r)re
       </div>
       <input type="hidden" id="clinica" name="clinica">
 
+      <div class="field">
+        <label for="sexo">Sexo</label>
+        <select id="sexo" name="sexo">
+          <option value="">Não selecionado</option>
+          <option value="Masculino">Masculino</option>
+          <option value="Feminino">Feminino</option>
+        </select>
+      </div>
+
       <!-- Data nasc + cidade -->
       <div class="two">
         <div class="field">
@@ -1294,6 +1303,7 @@ function coletar() {
     clinica:             document.getElementById('clinica').value,
     cidade:              document.getElementById('cidade').value.trim(),
     data_nascimento:     document.getElementById('nasc').value,
+    sexo:                valorCampo('sexo'),
     cpf:                 valorCampo('cpf').replace(/\D/g, ''),
     rg:                  valorCampo('rg'),
     endereco:            valorCampo('endereco'),
